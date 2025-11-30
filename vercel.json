@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "functions": {
+    "api/warm-transfer.js": {
+      "runtime": "nodejs18.x"
+    }
+  },
+  "routes": [
+    {
+      "src": "/api/warm-transfer",
+      "dest": "/api/warm-transfer.js"
+    }
+  ]
+}
