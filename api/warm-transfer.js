@@ -1,25 +1,17 @@
 export default async function handler(req, res) {
-  // Only accept POST requests from Blackbox
   if (req.method !== "POST") {
     return res.status(405).json({ error: "Method not allowed" });
   }
 
-  try {
-    const payload = req.body;
+  const state = req.body;
 
-    console.log("🔥 Received warm transfer payload from Blackbox:");
-    console.log(JSON.stringify(payload, null, 2));
+  console.log("Received JSON state object:", state);
 
-    // ------------------------------------------------
-    // 1. Extract JSON state object
-    // ------------------------------------------------
-    const handoff = payload?.handoff_data;
-
-    if (!handoff) {
-      return res.status(400).json({
-        error: "Missing handoff_data in payload"
-      });
-    }
+  return res.status(200).json({
+    status: "ok",
+    received: state
+  });
+}
 
     // ------------------------------------------------
     // 2. Example: Forward this to your CRM / DB / Agent UI
