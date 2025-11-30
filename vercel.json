@@ -1,10 +1,5 @@
 {
   "version": 2,
-  "functions": {
-    "api/warm-transfer.js": {
-      "runtime": "now-node@1.0.0"
-    }
-  },
   "routes": [
     {
       "src": "/api/warm-transfer",
