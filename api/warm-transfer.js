@@ -3,13 +3,13 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: "Method not allowed" });
   }
 
-  const state = req.body;
+  const payload = req.body;
 
-  console.log("Received JSON state object:", state);
+  console.log("Received JSON state:", payload);
 
   return res.status(200).json({
     status: "ok",
-    received: state
+    received_state: payload
   });
 }
 
