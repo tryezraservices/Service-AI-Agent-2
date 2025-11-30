@@ -2,7 +2,7 @@
   "version": 2,
   "functions": {
     "api/warm-transfer.js": {
-      "runtime": "nodejs16.x"
+      "runtime": "now-node@1.0.0"
     }
   },
   "routes": [
